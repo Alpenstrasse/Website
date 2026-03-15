@@ -40,15 +40,14 @@ jobs:
       - name: Install plugins from bundled packages
         run: |
           ./revela packages refresh
-          ls -la packages/
           ./revela plugin install Spectara.Revela.Plugins.Calendar
           ./revela plugin install Spectara.Revela.Plugins.Source.Calendar
 
       - name: Fetch calendar data
-        run: ./revela source calendar fetch
+        run: ./revela source calendar fetch --project .
 
       - name: Generate site
-        run: ./revela generate all
+        run: ./revela generate all --project .
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
