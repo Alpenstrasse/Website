@@ -21,10 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Download latest Revela release
-        uses: robinraju/release-downloader@v1
+        uses: robinraju/release-downloader@v1.12
         with:
           repository: Spectara/Revela
           latest: true
