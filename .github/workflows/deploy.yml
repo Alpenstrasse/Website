@@ -40,8 +40,8 @@ jobs:
       - name: Install plugins from bundled packages
         run: |
           ./revela packages refresh
-          ./revela plugin install Spectara.Revela.Plugins.Calendar --source ./packages
-          ./revela plugin install Spectara.Revela.Plugins.Source.Calendar --source ./packages
+          ./revela plugin install Calendar
+          ./revela plugin install Source.Calendar
 
       - name: Fetch calendar data
         run: ./revela source calendar fetch
