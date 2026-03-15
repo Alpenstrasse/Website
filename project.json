@@ -1,0 +1,33 @@
+{
+  "name": "alpenstrasse",
+  "paths": {
+    "source": "source",
+    "output": "output"
+  },
+  "project": {
+    "basePath": "/",
+    "baseUrl": "https://www.gottfried-schuster.de",
+    "language": "de"
+  },
+  "theme": {
+    "name": "Panorama"
+  },
+  "generate": {
+    "images": {
+      "jpg": 90
+    }
+  },
+  "plugins": {
+    "Spectara.Revela.Plugins.Serve": "0.0.0-test",
+    "Spectara.Revela.Plugins.Calendar": "0.0.0-test",
+    "Spectara.Revela.Plugins.Source.Calendar": "0.0.0-test"
+  },
+  "Spectara.Revela.Plugins.Source.Calendar": {
+    "feeds": {
+      "booking": {
+        "url": "https://ical.booking.com/v1/export/t/6a6bce0f-e2ad-4523-aa09-d5ac0ab34b4f.ics",
+        "output": "01 Verfuegbarkeit/bookings.ics"
+      }
+    }
+  }
+}

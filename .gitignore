@@ -1,0 +1,11 @@
+# Revela build output
+output/
+.cache/
+plugins/
+
+# iCal feed (fetched at build time)
+source/01 Verfuegbarkeit/bookings.ics
+
+# OS
+Thumbs.db
+.DS_Store

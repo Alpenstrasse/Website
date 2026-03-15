@@ -1,0 +1,4 @@
+{{~ if gallery.title ~}}
+<h1>{{ gallery.title }}</h1>
+{{~ end ~}}
+{{~ gallery.body ~}}

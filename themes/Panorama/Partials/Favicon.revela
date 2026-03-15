@@ -1,0 +1,6 @@
+    <link rel="icon" type="image/png" href="{{ basepath }}favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{{ basepath }}favicon/favicon.svg" />
+    <link rel="shortcut icon" href="{{ basepath }}favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ basepath }}favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
+    <link rel="manifest" href="{{ basepath }}favicon/site.webmanifest" />

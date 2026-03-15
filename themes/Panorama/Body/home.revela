@@ -1,0 +1,37 @@
+{{~ if gallery.title ~}}
+<h1>{{ gallery.title }}</h1>
+{{~ end ~}}
+{{~ gallery.body ~}}
+
+{{~ if images && images.size > 0 ~}}
+<section class="gallery">
+  {{~ for image in images ~}}
+  {{~ if !image.sizes || image.sizes.size == 0; continue; end ~}}
+  {{~ largest_size = image.sizes | array.last ~}}
+  {{~ is_landscape = image.width >= image.height ~}}
+  <article tabindex="0" id="{{ image.id }}" style="--width:{{ image.width }}; --height:{{ image.height }};">
+    <picture>
+      {{~ for format in image_formats ~}}
+      <source type="image/{{ format }}" sizes="auto" srcset="
+        {{~ for size in image.sizes ~}}
+        {{~ actual_width = is_landscape ? size : ((size * image.width / image.height) | math.floor) ~}}
+        {{- image_basepath }}{{ image.url }}/{{ size }}.{{ format }} {{ actual_width }}w{{ if !for.last }},{{ end }}
+        {{~ end ~}}">
+      {{~ end ~}}
+      <img alt="{{ image.title }}" src="{{ image_basepath }}{{ image.url }}/{{ image.sizes | array.last }}.{{ image_formats | array.last }}"
+           sizes="auto" width="{{ image.width }}" height="{{ image.height }}" loading="lazy" decoding="async">
+    </picture>
+    <figure>
+      <a href="#" tabindex="-1" title="Schließen">×</a>
+      <picture>
+        {{~ for format in image_formats ~}}
+        <source type="image/{{ format }}" srcset="{{ image_basepath }}{{ image.url }}/{{ largest_size }}.{{ format }}">
+        {{~ end ~}}
+        <img alt="{{ image.title }}" src="{{ image_basepath }}{{ image.url }}/{{ largest_size }}.{{ image_formats | array.last }}"
+             width="{{ image.width }}" height="{{ image.height }}" loading="lazy" decoding="async">
+      </picture>
+    </figure>
+  </article>
+  {{~ end ~}}
+</section>
+{{~ end ~}}

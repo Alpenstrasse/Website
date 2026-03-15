@@ -1,0 +1,43 @@
++++
+title = "Kontakt"
+description = "Kontakt und Reservierung – Ferienwohnung Alpenstraße 8 Dresden"
++++
+
+Wollen Sie sich über die Ferienwohnung oder Ausflugsmöglichkeiten informieren,
+oder uns eine Nachricht zukommen lassen, dann schreiben Sie uns:
+
+<div class="contact-info">
+  <div class="contact-block">
+    <h3>Adresse</h3>
+    <p>
+      Familie Gottfried Schuster<br>
+      Alpenstr. 8<br>
+      D-01326 Dresden
+    </p>
+  </div>
+  <div class="contact-block">
+    <h3>Telefon</h3>
+    <p>
+      +49 (0) 351 2640409<br>
+      <small>wochentags möglichst ab 18:00 Uhr,<br>
+      an Wochenenden und feiertags ganztägig</small>
+    </p>
+    <p>
+      Mobil: +49 (0) 173 6650012
+    </p>
+  </div>
+  <div class="contact-block">
+    <h3>E-Mail</h3>
+    <p>
+      <a href="mailto:fewo@gottfried-schuster.de">fewo@gottfried-schuster.de</a>
+    </p>
+  </div>
+</div>
+
+## Reservierungsanfrage
+
+Nach Prüfung der Verfügbarkeit erhalten Sie von uns zu Ihrer Anfrage eine
+Information oder, wenn gewünscht, eine Buchungsbestätigung. Ihre persönlichen Daten
+werden selbstverständlich nicht an Dritte weitergegeben.
+
+<a href="mailto:fewo@gottfried-schuster.de?subject=Reservierungsanfrage%20Ferienwohnung%20Alpenstra%C3%9Fe%208&body=Sehr%20geehrte%20Familie%20Schuster%2C%0A%0Aich%20m%C3%B6chte%20gern%20Ihre%20Ferienwohnung%20buchen.%0A%0AAnreise%3A%20__.__.____(Datum)%0AAbreise%3A%20__.__.____(Datum)%0AAnzahl%20Personen%3A%20____%0A%0AName%3A%20____%0ATelefon%3A%20____%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen" class="cta-button">Reservierungsanfrage per E-Mail senden</a>

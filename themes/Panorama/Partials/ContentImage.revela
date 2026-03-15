@@ -1,0 +1,20 @@
+{{~ if !image.sizes || image.sizes.size == 0; ret; end ~}}
+{{~ largest_size = image.sizes | array.last ~}}
+{{~ is_landscape = image.width >= image.height ~}}
+{{~ fallback_size = largest_size > 1280 ? 1280 : largest_size ~}}
+{{~ actual_fallback = 0 ~}}
+{{~ for size in image.sizes ~}}
+{{~ if size <= fallback_size; actual_fallback = size; end ~}}
+{{~ end ~}}
+{{~ if actual_fallback == 0; actual_fallback = image.sizes[0]; end ~}}
+<picture class="content-image{{ for cls in classes }} {{ cls }}{{ end }}"{{ if image.placeholder }} style="--lqip:{{ image.placeholder }}"{{ end }}>
+{{~ for format in image_formats ~}}
+  <source type="image/{{ format }}" srcset="
+    {{~ for size in image.sizes ~}}
+    {{~ actual_width = is_landscape ? size : ((size * image.width / image.height) | math.floor) ~}}
+    {{- image_basepath }}{{ image.url }}/{{ size }}.{{ format }} {{ actual_width }}w{{ if !for.last }}, {{ end }}
+    {{~ end ~}}">
+{{~ end ~}}
+  <img src="{{ image_basepath }}{{ image.url }}/{{ actual_fallback }}.jpg" alt="{{ alt }}"
+       width="{{ image.width }}" height="{{ image.height }}" loading="lazy" decoding="async">
+</picture>

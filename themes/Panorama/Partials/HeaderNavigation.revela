@@ -1,0 +1,5 @@
+{{~ for item in nav_items ~}}
+{{~ if !item.hidden ~}}
+<li><a href="{{ basepath }}{{ item.url }}"{{ if item.active }} class="active"{{ end }}>{{ item.text }}</a></li>
+{{~ end ~}}
+{{~ end ~}}
